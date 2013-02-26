@@ -1,0 +1,29 @@
+{
+  "name": "Gunboat",
+  "title": "Gunboat",
+  "description": "A set of reuseable gui elements for can.js",
+  "version": "0.1.0",
+  "homepage": "https://github.com/seich/gunboat",
+  "author": {
+    "name": "Sergio Diaz",
+    "email": "seich@martianwabbit.com",
+    "url": "http://www.martianwabbit.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/seich/gunboat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seich/gunboat/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/seich/gunboat/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "jquery": "*"
+  },
+  "keywords": []
+}
