@@ -5,12 +5,22 @@
 	<link rel="stylesheet" href="gunboat.css">
 </head>
 <body>
-	
 	<a href="#specialModal" data-modal="true">Modal!</a>
 
 	<div id="specialModal" class="modal hide">
-		<h1>Hello World</h1>
-		<p>This is a dialog.</p>
+		<div class="header">
+			<h1>Hello World</h1>
+			<button type="button" class="close" data-modal-close="true">&times;</button>
+		</div>
+		
+		<div class="body">
+			<p>This is a dialog.</p>
+		</div>
+
+		<div class="footer">
+			<button class="btn">Save</button>
+			<button class="btn btn-close" data-modal-close="true">Close</button>
+		</div>
 	</div>
 
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
