@@ -4,12 +4,12 @@
 		defaults: {
 			'top': false,
 			'left': false,
-			'isShown': false
+			'isShown': false,
+			'showOverlay': false
 		}
 	},
 	{
 		'init': function(element, options) {
-			var self = this;
 			this.show();
 		},
 
@@ -20,10 +20,15 @@
 
 			this.options.isShown = true;
 
-			if ($(".modal-overlay").length === 0) {
-				$("body").append($("<div/>", {
-					'class': 'modal-overlay'
-				}));
+
+			if (this.options.showOverlay === true) {
+				if ($(".modal-overlay").length === 0) {
+					$("body").append($("<div/>", {
+						'class': 'modal-overlay'
+					}));
+				} else {
+					$(".modal-overlay").show();
+				}
 			}
 
 			this.element.removeClass("hide");
@@ -48,6 +53,10 @@
 				"top": topPos,
 				"left": leftPos
 			});
+		},
+
+		'{window} resize': function() {
+			this.calculatePostion();
 		}
 	});
 

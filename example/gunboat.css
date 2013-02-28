@@ -1,5 +1,7 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
 body {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
 .hide {
@@ -8,44 +10,85 @@ body {
 
 .modal-overlay {
 	background: #444;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
 	bottom: 0;
+	left: 0;
 	opacity: 0.5;
+	position: absolute;
+	right: 0;
+	top: 0;
 }
 
 .modal {
-	z-index: 9999;
 	background: #1E1E1A;
 	color: #fff;
 	position: absolute;
 	width: 500px;
-	min-height: 200px;
+	z-index: 9999;
+}
+
+.modal .header {
+	background: rgba(14, 138, 200, 0.86);
+	position: relative;
 }
 
 .modal .header h1 {
+	display: inline-block;
+	line-height: 1.4;
 	margin: 0;
 	width: 94%;
-	display: inline-block;
+}
+
+.modal .header,
+.modal .body,
+.modal .footer {
+	padding: 5px;
 }
 
 .modal .header .close {
 	background: none;
 	border: none;
+	bottom: 0;
 	color: #fff;
 	display: inline-block;
 	font-size: 2em;
 	margin: 0;
 	padding: 0;
-	width: 5%;
-	position: relative;
-	top: 0;
+	position: absolute;
 	right: 0;
+	top: 0;
+	min-width: 10%;
+	padding-bottom: 0;
 }
 
 .modal .header .close:hover {
+	background: rgb(0, 77, 128);
 	cursor: pointer;
-	background: rgb(44, 126, 206);
+}
+
+.modal .footer {
+	text-align: right;
+	border-top: 1px solid rgba(65, 65, 65, 0.47);
+	padding: 5px;
+}
+
+.btn {
+	border: none;
+	color: white;
+	cursor: pointer;
+	font-size: 1em;
+	font-weight: 600;
+	padding: 0.5em;
+	background: rgba(14, 138, 200, 0.86);
+}
+
+.btn:hover {
+	background: rgb(0, 77, 128);
+}
+
+.btn.red {
+	background: rgba(228, 56, 56, 0.90);
+}
+
+.btn.red:hover {
+	background: rgba(228, 56, 56, 0.50);
 }

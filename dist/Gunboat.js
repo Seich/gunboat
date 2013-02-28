@@ -1,4 +1,4 @@
-/*! Gunboat - v0.1.0 - 2013-02-27
+/*! Gunboat - v0.1.0 - 2013-02-28
 * https://github.com/seich/gunboat
 * Copyright (c) 2013 Sergio Diaz; Licensed MIT */
 
@@ -8,12 +8,12 @@
 		defaults: {
 			'top': false,
 			'left': false,
-			'isShown': false
+			'isShown': false,
+			'showOverlay': false
 		}
 	},
 	{
 		'init': function(element, options) {
-			var self = this;
 			this.show();
 		},
 
@@ -24,10 +24,15 @@
 
 			this.options.isShown = true;
 
-			if ($(".modal-overlay").length === 0) {
-				$("body").append($("<div/>", {
-					'class': 'modal-overlay'
-				}));
+
+			if (this.options.showOverlay === true) {
+				if ($(".modal-overlay").length === 0) {
+					$("body").append($("<div/>", {
+						'class': 'modal-overlay'
+					}));
+				} else {
+					$(".modal-overlay").show();
+				}
 			}
 
 			this.element.removeClass("hide");
@@ -52,6 +57,10 @@
 				"top": topPos,
 				"left": leftPos
 			});
+		},
+
+		'{window} resize': function() {
+			this.calculatePostion();
 		}
 	});
 
