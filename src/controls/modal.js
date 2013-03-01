@@ -5,7 +5,7 @@
 			'top': false,
 			'left': false,
 			'isShown': false,
-			'showOverlay': false
+			'showOverlay': true
 		}
 	},
 	{
