@@ -2,10 +2,10 @@
 <html>
 <head>
 	<title>Gunboat | Can.js GUI Elements &amp; Components</title>
-	<link rel="stylesheet" href="gunboat.css">
+	<link rel="stylesheet" href="../dist/gunboat.css">
 </head>
 <body>
-	<a href="#specialModal" data-modal="true">Modal!</a>
+	<button class="btn" data-modal="specialModal">Modal</button>
 
 	<div id="specialModal" class="modal hide">
 		<div class="header">
@@ -27,12 +27,10 @@
 	<script src="../libs/can.js"></script>
 	<script src="../dist/gunboat.js"></script>
 	<script>
-		$("[data-modal='true']").on('click', function(e) {
+		$("button[data-modal]").on('click', function(e) {
 			var $this = $(this);
-			var $modal = $("#" + $this.attr("href").slice(1));
-			if ($modal.data("modal-ready") === undefined) {
-				new gunboat.Modal($modal);
-			}
+			var $modal = $("#" + $this.data("modal"));
+			new gunboat.Modal($modal, {showOverlay: false});
 		});
 	</script>
 </body>

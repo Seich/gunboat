@@ -40,6 +40,7 @@
 			this.options.isShown = false;
 			this.element.addClass("hide");
 			$(".modal-overlay").hide();
+			this.destroy();
 		},
 
 		'[data-modal-close=true] click': function() {

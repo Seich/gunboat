@@ -51,10 +51,20 @@ module.exports = function(grunt) {
         $: true
       }
     },
-    uglify: {}
+    uglify: {},
+    sass: {
+      dist: {
+        files: {
+          'dist/gunboat.css': [
+            'src/css/*.scss'
+          ]
+        }
+      }
+    }
   });
 
   // Default task.
   grunt.registerTask('default', 'lint concat min');
 
+  grunt.loadNpmTasks('grunt-contrib-sass');
 };

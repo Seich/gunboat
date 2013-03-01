@@ -1,4 +1,4 @@
-/*! Gunboat - v0.1.0 - 2013-02-28
+/*! Gunboat - v0.1.0 - 2013-03-01
 * https://github.com/seich/gunboat
 * Copyright (c) 2013 Sergio Diaz; Licensed MIT */
 
@@ -44,6 +44,7 @@
 			this.options.isShown = false;
 			this.element.addClass("hide");
 			$(".modal-overlay").hide();
+			this.destroy();
 		},
 
 		'[data-modal-close=true] click': function() {
